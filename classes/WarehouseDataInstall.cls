@@ -27,10 +27,10 @@ public with sharing class WarehouseDataInstall {
 	@isTest
 	public static void testWarehouseDataInstall() {
 		WarehouseDataInstall wdi = new WarehouseDataInstall();
-		if(WarehouseDataInstall.getHasData()) {
+		if(!WarehouseDataInstall.getHasData()) {
 			wdi.createData();
 		}
-		System.assertEquals(WarehouseDataInstall.getHasData(),true);
+		System.assertEquals(true,WarehouseDataInstall.getHasData());
 	}
 
 }
