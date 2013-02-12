@@ -22,5 +22,15 @@ public with sharing class WarehouseDataInstall {
 		
 		return null;
 	}
+	
+	
+	@isTest
+	public static void testWarehouseDataInstall() {
+		WarehouseDataInstall wdi = new WarehouseDataInstall();
+		if(WarehouseDataInstall.getHasData()) {
+			wdi.createData();
+		}
+		System.assertEquals(WarehouseDataInstall.getHasData(),true);
+	}
 
 }
